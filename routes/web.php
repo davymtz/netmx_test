@@ -12,8 +12,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/*
-Route::get('/', function () {
-    return view('welcome');
-});*/
-Route::get('/login', 'AuthController@showLoginForm')->name("login");
+// Auth
+Route::get('/', 'AuthController@showLoginForm')->name("login");
+Route::post('/', 'AuthController@login');
+Route::get('/logout', 'AuthController@logout')->name('logout');
+
+
+// Panel
+Route::group(["middleware"=>"CheckAuthenticatedUser"], function ()
+{
+    //Route::get('/profileAdminWeb','UserAdminController@showProfileAdminWeb')->name("user-profile");
+    Route::get("/panel", function() {
+        return view("panel_task.panel");
+    });
+});
