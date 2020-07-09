@@ -15,16 +15,24 @@ class UsuarioTableSeeder extends Seeder
     {
         $current_date = Carbon::now("America/Mexico_City")->toDateTimeString();
         DB::table("usuario")->insert([
-            "usuario"=>"david",
+            "usuario"=>"usuario1",
             "password"=>bcrypt("password"),
-            "nombre"=>"David",
+            "nombre"=>"Usuario 1",
             "created_at"=>$current_date,
             "idperfil_fk"=>1
         ]);
         DB::table("usuario")->insert([
-            "usuario"=>"angelica",
+            "usuario"=>"usuario2",
             "password"=>bcrypt("password"),
-            "nombre"=>"Angelica",
+            "nombre"=>"Usuario 2",
+            "created_at"=>$current_date,
+            "idperfil_fk"=>2
+        ]);
+
+        DB::table("usuario")->insert([
+            "usuario"=>"usuario3",
+            "password"=>bcrypt("password"),
+            "nombre"=>"User 3",
             "created_at"=>$current_date,
             "idperfil_fk"=>2
         ]);
