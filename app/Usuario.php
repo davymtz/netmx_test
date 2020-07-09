@@ -29,7 +29,7 @@ class Usuario extends Authenticatable
         Session::put([
             "idusuario"=>$user["idusuario"],
             "usuario"=>$user["usuario"],
-            "name"=>$user["nombre"],
+            "nombre"=>$user["nombre"],
             "idperfil_fk"=>$user["idperfil_fk"],
             "ifconnect"=>true
         ]);

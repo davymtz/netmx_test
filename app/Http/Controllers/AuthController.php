@@ -21,9 +21,9 @@ class AuthController extends Controller
                 Auth::user()->setSession(Auth::user()->toArray());
                 return redirect()->intended("panel");
             }
-            return redirect()->route('login')->with("error_messages",["Las credenciales no coinciden"]);
+            return redirect()->route('login')->with("messages",["Las credenciales no coinciden"]);
         }else{
-            $request->session()->flash("error_messages",$validacion->errors()->all());
+            $request->session()->flash("messages",$validacion->errors()->all());
             return redirect()->route('login')->send();
         }
     }

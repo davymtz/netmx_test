@@ -1,4 +1,4 @@
-@if(session("error_messages"))
+@if(session("messages"))
     @foreach (session('error_messages') as $value)
         <div class="alert alert-danger alert-dismissible">
             {{ $value }}

@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/netmx.iml" filepath="$PROJECT_DIR$/.idea/netmx.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../prime_crud/.idea/prime_crud.iml" filepath="$PROJECT_DIR$/../prime_crud/.idea/prime_crud.iml" />
     </modules>
   </component>
 </project>
